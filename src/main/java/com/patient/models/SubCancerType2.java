@@ -17,6 +17,46 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class SubCancerType2 implements Serializable {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getSubcancertypeid() {
+        return subcancertypeid;
+    }
+
+    public void setSubcancertypeid(int subcancertypeid) {
+        this.subcancertypeid = subcancertypeid;
+    }
+
+    public SubCancerType1 getSubCancerType1() {
+        return subCancerType1;
+    }
+
+    public void setSubCancerType1(SubCancerType1 subCancerType1) {
+        this.subCancerType1 = subCancerType1;
+    }
+
+    public List<RegimenDetail> getRegimenDetails() {
+        return regimenDetails;
+    }
+
+    public void setRegimenDetails(List<RegimenDetail> regimenDetails) {
+        this.regimenDetails = regimenDetails;
+    }
+
     @Column(name = "pk")
     @Id
     private int id;

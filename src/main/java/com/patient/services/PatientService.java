@@ -15,9 +15,6 @@ import com.patient.repos.PatientRepository;
 public class PatientService {
 
 	@Autowired
-	private RegimenDetailRepository regimenDetailRepository;
-
-	@Autowired
 	private PatientRepository patientRepository;
 
 	@Autowired

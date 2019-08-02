@@ -26,4 +26,36 @@ public class SubCancerType1 implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id")
     private CancerType cancerType;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getSubcancertypeid() {
+        return subcancertypeid;
+    }
+
+    public void setSubcancertypeid(int subcancertypeid) {
+        this.subcancertypeid = subcancertypeid;
+    }
+
+    public CancerType getCancerType() {
+        return cancerType;
+    }
+
+    public void setCancerType(CancerType cancerType) {
+        this.cancerType = cancerType;
+    }
 }

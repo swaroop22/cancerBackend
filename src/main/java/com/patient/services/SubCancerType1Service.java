@@ -44,12 +44,11 @@ public class SubCancerType1Service {
 
     public SubCancerType1 addOrUpdateSubCancerType1(String payLoad) throws JsonParseException, JsonMappingException, IOException {
         SubCancerType1 subCancerType1 = objectMapper.readValue(payLoad, SubCancerType1.class);
-        SubCancerType1 subCancerType = SubCancerType1.builder()
-                .id(subCancerType1.getId() != 0? subCancerType1.getId() :subCancerTypeRepository.getMaxId() + 1)
-                .subcancertypeid(subCancerType1.getSubcancertypeid())
-                .cancerType(cancerTypeRepository.findOne(subCancerType1.getSubcancertypeid()))
-                .title(subCancerType1.getTitle())
-                .build();
+
+        SubCancerType1 subCancerType = new SubCancerType1();
+        subCancerType.setId(subCancerType1.getId() != 0? subCancerType1.getId() :subCancerTypeRepository.getMaxId() + 1);
+        subCancerType.setCancerType(cancerTypeRepository.findOne(subCancerType1.getSubcancertypeid()));
+        subCancerType.setTitle(subCancerType1.getTitle());
         return  subCancerTypeRepository.save(subCancerType);
     }
 
