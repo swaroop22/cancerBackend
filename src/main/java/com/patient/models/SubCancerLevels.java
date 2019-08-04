@@ -2,10 +2,9 @@ package com.patient.models;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -13,10 +12,21 @@ import javax.persistence.Table;
 public class SubCancerLevels {
     @Column(name = "pk")
     @Id
-    private int id;
+    public int id;
 
     @Column(name = "title")
     private String title;
+
+    @Transient
+    private List<RegimenDetail> regimenDetailList =  new ArrayList<>();
+
+    public List<RegimenDetail> getRegimenDetailList() {
+        return regimenDetailList;
+    }
+
+    public void setRegimenDetailList(List<RegimenDetail> regimenDetailList) {
+        this.regimenDetailList = regimenDetailList;
+    }
 
     public int getId() {
         return id;

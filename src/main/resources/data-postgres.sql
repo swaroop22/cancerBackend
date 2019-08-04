@@ -36,7 +36,6 @@ INSERT INTO subcancertype2 (pk, subcancer_type1_id, title) VALUES (45, 89, 'Hodg
 INSERT INTO subcancertype2 (pk, subcancer_type1_id, title) VALUES (46, 90, 'Non-Hodgkin''s');
 INSERT INTO subcancertype2 (pk, subcancer_type1_id, title) VALUES (47, 91, 'Acute Lymphocytic Leukemia');
 INSERT INTO subcancertype2 (pk, subcancer_type1_id, title) VALUES (48, 92, 'Acute Myeloid Leukemia');
-INSERT INTO subcancertype1 (pk, cancer_type_id, title) VALUES (47, 1, 'CNS Tumors');
 INSERT INTO subcancertype1 (pk, cancer_type_id, title) VALUES (3, 3, 'Anal Cancer');
 INSERT INTO subcancertype1 (pk, cancer_type_id, title) VALUES (4, 3, 'Colon and Rectal Cancer');
 INSERT INTO subcancertype1 (pk, cancer_type_id, title) VALUES (5, 3, 'Esophegeal Cancer');

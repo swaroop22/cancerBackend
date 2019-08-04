@@ -25,7 +25,7 @@ public class SubCancerLevelsController {
 
 
 
-    @RequestMapping(value = "/ssubCancerLevelsControllerById/add", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+    @RequestMapping(value = "/subCancerLevelsControllerById/add", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
     public SubCancerLevels addSubCancerType1(@RequestBody String payLoad)
             throws JsonParseException, JsonMappingException, IOException {
         return subCancerLevelsService.addOrUpdateSubCancerLevels(payLoad);

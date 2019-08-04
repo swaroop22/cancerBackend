@@ -18,7 +18,7 @@ import java.io.Serializable;
 public class RegimenDetail implements Serializable {
     @Id
     @Column(name = "pk")
-    private Long id;
+    public Long id;
 
 
     @Column(name = "subcancer_type3_id")
