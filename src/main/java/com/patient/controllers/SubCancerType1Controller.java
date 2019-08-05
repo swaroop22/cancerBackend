@@ -52,7 +52,7 @@ public class SubCancerType1Controller {
      * @throws JsonMappingException
      * @throws IOException
      */
-    @RequestMapping(value = "/subCancerType1Controller/{id}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.DELETE)
+    @RequestMapping(value = "/subCancerType1ControllerById/{id}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.DELETE)
     public long deleteSubCancerType1(@PathVariable("id") int id) {
         subCancerType1Service.deleteSubCancerType1(id);
         return id;
