@@ -49,6 +49,7 @@ public class RegimenDetailService {
         RegimenDetail regimenDetail1 = objectMapper.readValue(payLoad, RegimenDetail.class);
         SubCancerType1 subCancerType1 = subCancerTypeRepository.findOne(regimenDetail1.getId2());
         SubCancerType2 subCancerType2 = subCancerType2Repository.findOne(regimenDetail1.getId3());
+        System.out.println("regimen"+regimenDetail1);
         RegimenDetail regimenDetail = RegimenDetail.builder()
                 .id(getRegimenId(regimenDetail1))
                 .brandNames(regimenDetail1.getBrandNames())
@@ -66,13 +67,13 @@ public class RegimenDetailService {
 
     public RegimenDetail updateRegimenDetail(String payLoad) throws JsonParseException, JsonMappingException, IOException {
         RegimenDetail regimenDetail1 = objectMapper.readValue(payLoad, RegimenDetail.class);
-        RegimenDetail regimenDetail = regimenDetailRepository.findOne((long) regimenDetail1.getSubCancerTypeId3());
+        RegimenDetail regimenDetail = regimenDetailRepository.findOne(regimenDetail1.getId());
 
         if(regimenDetail.getBrandNames() != regimenDetail1.getBrandNames()
-           | regimenDetail.getDispName() != regimenDetail1.getDispName()
-           |  regimenDetail.getDosageModifications() != regimenDetail1.getDosageModifications()
-           | regimenDetail.getEmetogenicPotential() != regimenDetail.getDosageModifications()
-           | regimenDetail.getSchedule() != regimenDetail1.getSchedule()
+                | regimenDetail.getDispName() != regimenDetail1.getDispName()
+                |  regimenDetail.getDosageModifications() != regimenDetail1.getDosageModifications()
+                | regimenDetail.getEmetogenicPotential() != regimenDetail.getDosageModifications()
+                | regimenDetail.getSchedule() != regimenDetail1.getSchedule()
                 | regimenDetail.getReference() != regimenDetail1.getReference()){
 
             regimenDetail.setBrandNames(regimenDetail1.getBrandNames());

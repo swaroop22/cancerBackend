@@ -56,6 +56,118 @@ public class RegimenDetail implements Serializable {
     @JoinColumn(name = "subcancertype2_id")
     private SubCancerType2 subCancerType2;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getSubCancerTypeId3() {
+        return SubCancerTypeId3;
+    }
+
+    public void setSubCancerTypeId3(int subCancerTypeId3) {
+        SubCancerTypeId3 = subCancerTypeId3;
+    }
+
+    public String getDispName() {
+        return dispName;
+    }
+
+    public void setDispName(String dispName) {
+        this.dispName = dispName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
+
+    public String getEmetogenicPotential() {
+        return emetogenicPotential;
+    }
+
+    public void setEmetogenicPotential(String emetogenicPotential) {
+        this.emetogenicPotential = emetogenicPotential;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public String getDosageModifications() {
+        return dosageModifications;
+    }
+
+    public void setDosageModifications(String dosageModifications) {
+        this.dosageModifications = dosageModifications;
+    }
+
+    public String getBrandNames() {
+        return brandNames;
+    }
+
+    public void setBrandNames(String brandNames) {
+        this.brandNames = brandNames;
+    }
+
+    public SubCancerType2 getSubCancerType2() {
+        return subCancerType2;
+    }
+
+    public void setSubCancerType2(SubCancerType2 subCancerType2) {
+        this.subCancerType2 = subCancerType2;
+    }
+
+    public SubCancerType1 getSubCancerType1() {
+        return subCancerType1;
+    }
+
+    public void setSubCancerType1(SubCancerType1 subCancerType1) {
+        this.subCancerType1 = subCancerType1;
+    }
+
+    public int getId2() {
+        return id2;
+    }
+
+    public void setId2(int id2) {
+        this.id2 = id2;
+    }
+
+    public int getId3() {
+        return id3;
+    }
+
+    public void setId3(int id3) {
+        this.id3 = id3;
+    }
+
+    public int getId4() {
+        return id4;
+    }
+
+    public void setId4(int id4) {
+        this.id4 = id4;
+    }
+
     @ManyToOne
     @JoinColumn(name = "subcancertype3_id")
     private SubCancerType1 subCancerType1;
