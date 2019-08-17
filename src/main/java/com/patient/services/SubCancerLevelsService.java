@@ -57,13 +57,14 @@ public class SubCancerLevelsService {
     public SubCancerLevels addOrUpdateSubCancerLevels(String payLoad) throws JsonParseException, JsonMappingException, IOException {
         SubCancerLevels subCancerLevels = objectMapper.readValue(payLoad, SubCancerLevels.class);
         List<RegimenDetail> regimenDetailList = subCancerLevels.getRegimenDetailList();
+        int id = subCancerLevels.getId() != 0? subCancerLevels.getId() :(int) (subCancerLevelsRepository.getMaxId() +1);
 
         for(int i=0; i <= regimenDetailList.size()-1; i ++){
             regimenIds = regimenIds + " "+regimenDetailList.get(i).id;
         }
 
         SubCancerLevels subCancerLevels1 = new SubCancerLevels();
-        subCancerLevels1.setId(subCancerLevels.getId());
+        subCancerLevels1.setId(id);
         subCancerLevels1.setTitle(subCancerLevels1.getTitle());
         subCancerLevels.setRegimenDetail(regimenIds);
 
