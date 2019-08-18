@@ -102,6 +102,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-gcp-starter-sql:1.0.0.BUILD-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.41" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.10.19" level="project" />
