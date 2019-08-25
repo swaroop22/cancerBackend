@@ -17,7 +17,7 @@ public class CORSFilter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 		HttpServletResponse response = (HttpServletResponse) res;
 		
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+		response.setHeader("Access-Control-Allow-Origin", "https://onocology.appspot.com");
 		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
 		response.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Header, Origin, X-Requested-With, Content-Type, Accept");
 				
@@ -27,5 +27,7 @@ public class CORSFilter implements Filter {
 	public void init(FilterConfig filterConfig) {}
 
 	public void destroy() {}
+
+
 
 }
